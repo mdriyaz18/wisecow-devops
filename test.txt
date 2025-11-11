@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 Trigger pipeline Tue Nov 11 19:39:00 UTC 2025
+=======
+Workflow test Tue Nov 11 12:02:18 UTC 2025
+Trigger pipeline Tue Nov 11 12:28:29 UTC 2025
+Trigger pipeline Tue Nov 11 14:46:58 UTC 2025
+>>>>>>> 7c27fab (Trigger GitHub Actions build and push)
