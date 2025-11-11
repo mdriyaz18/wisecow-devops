@@ -28,4 +28,19 @@ jobs:
           context: .
           push: true
           tags: riyaz8919/wisecow:latest
+            deploy:
+    runs-on: ubuntu-latest
+    needs: build  # wait for build job to finish
+    steps:
+      - name: Deploy to EC2
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            docker pull riyaz8919/wisecow:latest
+            docker stop $(docker ps -q) || true
+            docker run -d -p 8080:8000 riyaz8919/wisecow:latest
+
 
