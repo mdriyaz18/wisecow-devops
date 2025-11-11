@@ -14,5 +14,5 @@ def wisecow():
     return f"<h1>🐮 Wisecow Says:</h1><p>{random.choice(quotes)}</p>"
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000)
+    app.run(host="0.0.0.0", port=8080, debug=True)
 
