@@ -37,12 +37,12 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            echo "🚀 Starting new deployment..."
+            echo "Starting new deployment..."
             docker stop $(docker ps -q) || true
             docker rm $(docker ps -a -q) || true
             docker pull riyaz8919/wisecow:latest
             docker run -d -p 8080:8080 riyaz8919/wisecow:latest
-            echo "✅ Deployment completed successfully!"
+            echo "Deployment completed successfully!"
 
 
 
